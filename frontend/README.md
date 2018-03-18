@@ -4,12 +4,12 @@ This project is the frontend of the **UEFA Champions Manager** application imple
 
 ## Running the application (development server)
 
-Install dependencies
+**Install dependencies**
 ```
 npm install
 ```
 
-Launch development server
+**Launch development server**
 ```
 npm start 
 ```
@@ -19,6 +19,10 @@ The app will automatically reload if you change any of the source files.
 
 The file `proxy.conf.json` has been configured to stablish a proxy to the default backend host and port (http://localhost:8080) in order to avoid cross-domain issues during the development.
 
+**Execute unit test**
+```
+npm test 
+```
 
 ## Project structure
 
