@@ -24,7 +24,7 @@ Run `mvn test` to execute the integration tests
     .    
     ├── src    
          ├── main/java/com/jvegarag/championsmanager        # Application source code
-         ├── config/RestConfiguration.java                  # Configuration beans
+                ├── config/RestConfiguration.java           # Configuration beans
                 ├── entity/*                                # JPA entities
                 ├── errorhandler/*                          # Rest exception handler to transform API errors in JSON
                 ├── repository/*                            # Exposed repositories (RESTFul resources)
