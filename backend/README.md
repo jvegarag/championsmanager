@@ -193,7 +193,7 @@ Resources are exposed following the HATEOAS principle. With HATEOAS, a client in
 ```
 
 ##### List of team types `GET http://${host}:${port}/api/team/search/findByCriteria{?name,countryName,page,size,sort,projection},`
-`i.e. GET http://${host}:${port}/api/team/team/search/findByCriteria?name=Madrid&countryName=Spa&page=0&size=10`
+`i.e. GET http://${host}:${port}/api/team/search/findByCriteria?name=Madrid&countryName=Spa&page=0&size=10`
 ```JSON
 {
     "_embedded": {
