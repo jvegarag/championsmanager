@@ -46,11 +46,10 @@ This folder contains the unique feature of the application, with the following c
   - check a Team as favorite, using TeamFavoriteComponent
   - remove a team
   - go to edit or create screen
-  - go to the detail of the evolutions. 
 
 * `shared` folder:  This folder includes contents referenced across several components inside teams feature:
   - `PaginatedModel`: Models to define the structures uses in the pagination of the table.
-  - `FavoriteComponent`: Component to check a Team as favorite
+  - `TeamFavoriteComponent`: Component to check a Team as favorite
   - `CountryModel`: Model for the countries
   - `TeamModel`: Model for a Team
   - `TeamService`: Business logic and communication with the backend.
