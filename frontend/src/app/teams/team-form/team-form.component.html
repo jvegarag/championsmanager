@@ -1,0 +1,86 @@
+<div class="container" *ngIf="team">
+  <div class="row">
+    <div class="col-md-8 detail-view">
+
+      <form (ngSubmit)="onSubmit()" #teamForm="ngForm">
+
+        <div class="row">
+
+          <div class="form-group col-md-12">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required minlength="4" maxlength="24" pattern="^[^\s]+$" trim
+                   [(ngModel)]="team.name" name="name" #nameField="ngModel">
+
+            <div *ngIf="nameField.invalid && (nameField.dirty || nameField.touched)" class="alert alert-danger">
+
+              <div *ngIf="nameField.errors.required">
+                Name is required.
+              </div>
+              <div *ngIf="nameField.errors.minlength">
+                Name must be at least 4 characters long.
+              </div>
+              <div *ngIf="nameField.errors.maxlength">
+                Name must be maximum 24 characters long.
+              </div>
+              <div *ngIf="nameField.errors.pattern">
+                Name must be one word.
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="row form-group">
+
+          <div class="col-md-4">
+            <div> <label for="opponents">Opponents</label> </div>
+            <ss-multiselect-dropdown #opponents="ngModel" id="opponents" name="opponents" [options]="opponentList"
+                                     [settings]="msOpponentListSettings" [(ngModel)]="opponentListSelected"></ss-multiselect-dropdown>
+          </div>
+
+          <div class="col-md-3">
+            <div> <label for="country">Country</label> </div>
+            <ss-multiselect-dropdown required #country="ngModel" id="country" name="country" [options]="countryList"
+                                     [settings]="msCountryListSettings" [(ngModel)]="countryListSelected"></ss-multiselect-dropdown>
+          </div>
+
+          <div class="col-md-3">
+            <div><label for="favorite">Favorite</label></div>
+            <input type="checkbox" id="favorite" name="favorite" [(ngModel)]="team.favorite" #name="ngModel"/>
+          </div>
+
+        </div>
+
+
+        <div class="row">
+
+          <div *ngIf="country.invalid && (country.dirty || country.touched)"
+               class="alert alert-danger col-md-9">
+            <div *ngIf="country.errors.required">
+              Country is required.
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="form-group col-md-12">
+            <div class="pull-right">
+              <button type="submit" class="btn btn-success" [disabled]="teamForm.form.invalid">Submit</button>
+              <a href="#" routerLink="/teams" class="btn btn-default" role="button">Cancel</a>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+
+    </div>
+
+  </div>
+</div>
+
+<div class="container" *ngIf="!team">
+  Loading...
+</div>

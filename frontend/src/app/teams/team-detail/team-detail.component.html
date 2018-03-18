@@ -1,0 +1,45 @@
+<div class="container" *ngIf="team">
+
+  <div class="row">
+    <div class="col-md-8 detail-view">
+
+      <div class="row field-row">
+        <div class="col-md-12">
+          <h3>{{ team.name | uppercase }} <cmp-team-favorite [team]="team"></cmp-team-favorite></h3>
+        </div>
+      </div>
+
+      <div class="row field-row">
+        <div class="col-md-12">
+          <div><label>Opponents</label></div>
+          <td>{{ team.opponents | pluck: 'name' | join: ', ' }}</td>
+        </div>
+      </div>
+
+      <div class="row field-row">
+        <div class="col-md-12">
+          <div><label>Country</label></div>
+          <div>{{ team.country.name }}</div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="pull-right">
+            <a href="#" [routerLink]="['/teams/edit/', team.id]" class="btn btn-info" role="button">
+              <i class="fa fa-edit"></i> Edit</a>
+
+            <a href="#" routerLink="/teams" class="btn btn-default" role="button">
+              <i class="fa fa-chevron-left"></i>Go back</a>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+</div>
+

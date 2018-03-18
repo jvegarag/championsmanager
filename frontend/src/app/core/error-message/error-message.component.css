@@ -1,0 +1,11 @@
+.error-container {
+  border: 1px solid #ffa3a3;
+  background-color: #fff2f2;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+button.close {
+  float:right;
+}

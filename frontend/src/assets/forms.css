@@ -1,0 +1,23 @@
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}
+
+ss-multiselect-dropdown.ng-valid[required] {
+border: 0px;
+}
+
+ss-multiselect-dropdown.ng-invalid:not(form) {
+border: 0px;
+}
+
+ss-multiselect-dropdown.ng-valid[required] button {
+border-left: 5px solid #42A948;
+}
+
+ss-multiselect-dropdown.ng-invalid:not(form) button {
+border-left: 5px solid #a94442;
+}
