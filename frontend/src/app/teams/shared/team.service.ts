@@ -28,7 +28,7 @@ export class TeamService {
   }
 
   getFilteredTeams(name: string, countryName: string): Observable<PaginatedList> {
-    const url = `${this.teamResourceUrl}/search/findByCriteria?name=${name}&countryName=${countryName}`;
+    const url = `${this.teamResourceUrl}/search/findByCriteria?size=10&name=${name}&countryName=${countryName}`;
     return this.http.get(url)
                     .map(response => this.buildPaginatedResponse(response));
   }

@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { Team } from '../shared/team.model';
 import { TeamService } from '../shared/team.service';
+import { Country } from '../shared/country.model';
 
 @Component({
   selector: 'cmp-team-form',
@@ -15,14 +16,15 @@ export class TeamFormComponent implements OnInit {
 
   private formType = 'create';
 
-  countryList: any[] = [];
-  countryListSelected: any[] = [];
+  countryList = [];
+  countryListSelected: number[] = [];
 
-  opponentList: any[] = [];
-  opponentListSelected: any[] = [];
+  opponentList = [];
+  opponentListSelected: number[] = [];
 
   msOpponentListSettings = {
-    enableSearch: true
+    enableSearch: true,
+    dynamicTitleMaxItems: 2
   };
 
   msCountryListSettings = {

@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'cmp-team-root',
   styleUrls: ['./app.component.css'],
   template: `
-    <div class="container">
+    <div class="main-app container">
       <div class="row">
         <h1 class="title">{{ title }}</h1>
       </div>
