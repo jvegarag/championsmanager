@@ -1,0 +1,26 @@
+local:
+  server:
+    port: 8080
+
+spring:
+    data:
+        rest:
+            basePath: /api
+            returnBodyOnCreate: true
+            returnBodyOnUpdate: true
+            maxPageSize: 1000
+    jpa:
+        generate-ddl: true
+        hibernate:
+            ddl-auto: create-drop
+    datasource:
+        sqlScriptEncoding: UTF-8
+
+
+# Configuration tokens
+team:
+    validation:
+        name:
+            maxWords: 1
+        favorites:
+            max: 5
