@@ -25,7 +25,7 @@ import { PaginatedList } from '../shared/paginated-list.model';
 export class TeamListComponent implements OnInit {
 
   teamPage: PaginatedList;
-  currentFilter: Filter = new Filter('', '');
+  currentFilter: Filter = new Filter('', '', 10);
 
   private searchTerms = new ReplaySubject<Filter>();
 
@@ -33,7 +33,7 @@ export class TeamListComponent implements OnInit {
     private teamService: TeamService) { }
 
   filter(): void {
-    this.searchTerms.next(new Filter(this.currentFilter.name, this.currentFilter.countryName));
+    this.searchTerms.next(new Filter(this.currentFilter.name, this.currentFilter.countryName, this.currentFilter.size));
   }
 
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class TeamListComponent implements OnInit {
         .debounceTime(300)
         .distinctUntilChanged()
         .switchMap(filters =>
-            this.teamService.getFilteredTeams(filters.name, filters.countryName))
+            this.teamService.getFilteredTeams(filters.name, filters.countryName, filters.size))
         .subscribe(
             page => { this.teamPage = page; },
             err =>  this.teamService.handleError(err)

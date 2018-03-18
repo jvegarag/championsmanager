@@ -42,7 +42,7 @@ This folder contains the unique feature of the application, with the following c
 * `TeamFormComponent`: Component to edit/create a Team using a template-driven form. The validations are added as validation attributes.
 
 * `TeamListComponent`: Component to list all the Teams using a paginated table. The user can:
-  - filter the teams by name and favorite. For retrieving the filtered Teams a `debounceTime` is used in order to wait a short time after every keystroke
+  - filter the teams by name and country. For retrieving the filtered Teams a `debounceTime` is used in order to wait a short time after every keystroke
   - check a Team as favorite, using TeamFavoriteComponent
   - remove a team
   - go to edit or create screen

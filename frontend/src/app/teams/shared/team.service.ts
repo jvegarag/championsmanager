@@ -18,8 +18,8 @@ import { Links } from './paginated-list.model';
 @Injectable()
 export class TeamService {
 
-  private teamResourceUrl = 'api/team';
-  private countryResourceUrl = 'api/country';
+  readonly teamResourceUrl = 'api/team';
+  readonly countryResourceUrl = 'api/country';
 
   constructor(
     private http: Http,
@@ -27,8 +27,8 @@ export class TeamService {
 
   }
 
-  getFilteredTeams(name: string, countryName: string): Observable<PaginatedList> {
-    const url = `${this.teamResourceUrl}/search/findByCriteria?size=10&name=${name}&countryName=${countryName}`;
+  getFilteredTeams(name: string, countryName: string, size: number): Observable<PaginatedList> {
+    const url = `${this.teamResourceUrl}/search/findByCriteria?size=${size}&name=${name}&countryName=${countryName}`;
     return this.http.get(url)
                     .map(response => this.buildPaginatedResponse(response));
   }

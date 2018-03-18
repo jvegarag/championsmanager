@@ -8,8 +8,7 @@ import { ErrorService } from './error.service';
   declarations: [ ErrorMessageComponent ],
   exports: [ ErrorMessageComponent ],
   imports: [ BrowserModule ],
-  providers: [ ErrorService ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  providers: [ ErrorService ]
 })
 export class CoreModule {
 

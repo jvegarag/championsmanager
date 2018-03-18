@@ -5,7 +5,7 @@ import { TeamService } from './team.service';
 
 @Component({
   selector: 'cmp-team-favorite',
-  template: `<img src="assets/img/star_{{team.favorite}}.png" (click)="toggleFavorite(team);  $event.stopPropagation()"/>`
+  template: `<img src="assets/img/star_{{team.favorite}}.png" (click)="toggleFavorite(team); $event.stopPropagation()"/>`
 })
 export class TeamFavoriteComponent {
 
