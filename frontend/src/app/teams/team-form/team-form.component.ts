@@ -24,13 +24,17 @@ export class TeamFormComponent implements OnInit {
 
   msOpponentListSettings = {
     enableSearch: true,
-    dynamicTitleMaxItems: 2
+    dynamicTitleMaxItems: 2,
+    itemClasses: 'ss-item',
+    buttonClasses: 'btn btn-outline-info'
   };
 
   msCountryListSettings = {
     enableSearch: true,
     selectionLimit: 1,
-    autoUnselect: true
+    autoUnselect: true,
+    itemClasses: 'ss-item',
+    buttonClasses: 'btn btn-outline-info'
   };
 
   constructor(

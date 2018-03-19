@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed, tick} from '@angular/core/testing';
 
 import { TeamFavoriteComponent } from '../shared/team-favorite.component';
 import { MultiselectDropdownModule } from 'angular-2-dropdown-multiselect';
@@ -34,9 +34,9 @@ describe('TeamFormComponent', () => {
         ])
       ],
       providers: [ TeamService ]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
+
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TeamFormComponent);
@@ -47,4 +47,6 @@ describe('TeamFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });

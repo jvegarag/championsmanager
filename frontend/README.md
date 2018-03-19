@@ -47,24 +47,33 @@ This folder contains the unique feature of the application, with the following c
 
 * `TeamListComponent`: Component to list all the Teams using a paginated table. The user can:
   - filter the teams by name and country. For retrieving the filtered Teams a `debounceTime` is used in order to wait a short time after every keystroke
-  - check a Team as favorite, using TeamFavoriteComponent
+  - check a Team as favorite, using `TeamFavoriteComponent`
   - remove a team
   - go to edit or create screen
 
 * `shared` folder:  This folder includes contents referenced across several components inside teams feature:
   - `PaginatedModel`: Models to define the structures uses in the pagination of the table.
-  - `TeamFavoriteComponent`: Component to check a Team as favorite
+  - `TeamFavoriteComponent`: Component to check a Team as favorite. This is distributed under shared folder because it's being used from several parts of the application.
   - `CountryModel`: Model for the countries
   - `TeamModel`: Model for a Team
   - `TeamService`: Business logic and communication with the backend.
 
+
+There are some other functionalities that are candidates to be implemented by using a reusable component like:
+  -  Search Filter component
+  -  Pagination size component
+  -  Table result component (sorting, column reordening, etc)
+
+For the sake of simplicity, we chose not to create a component for them. One example of reusable component can be found at `TeamFavoriteComponent` used from the list of teams and team detail feature.
+
+
 # Screenshots
 
 ### Team search (inital screen)
-
-### Team detail
+![](../doc/champions-list.png)
 
 ### Team edit
+![](../doc/champions-edit.png)
 
 ### Error handling
-
+![](../doc/champions-error.png)
