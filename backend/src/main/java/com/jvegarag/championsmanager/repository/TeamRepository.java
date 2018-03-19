@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 import java.util.List;
 
@@ -26,6 +27,7 @@ public interface TeamRepository extends PagingAndSortingRepository<Team, Long> {
     @Query("select count(t) from Team t where t.favorite = 1")
     int countByFavorite();
 
+    @RestResource(exported = false)
     @Query("select distinct t from Team t join t.opponents o where o.id=:id")
     List<Team> findByOpponentId(@Param("id") long id);
 }
