@@ -24,6 +24,14 @@ The file `proxy.conf.json` has been configured to stablish a proxy to the defaul
 npm test 
 ```
 
+## Project 3rd party dependencies
+- `bootstrap` The most popular front-end framework for developing responsive, mobile first projects on the web.
+- `angular-pipes` Angular pipes library (pluck, join, etc)
+- `angular-2-dropdown-multiselect`  Customizable dropdown multiselect in AngularX, TypeScript with bootstrap css.
+- `font-awesome` The iconic font and CSS framework
+  
+                                    
+
 ## Project structure
 
 There are two modules in the application, the root module `app.module` and the `core.module`. If another feature were added  to the app, it would be needed to add one `NgModule` for all distinct features in an application.
@@ -62,7 +70,7 @@ This folder contains the unique feature of the application, with the following c
 There are some other functionalities that are candidates to be implemented by using a reusable component like:
   -  Search Filter component
   -  Pagination size component
-  -  Table result component (sorting, column reordening, etc)
+  -  Table result component (sorting, column sorting, etc)
 
 For the sake of simplicity, we chose not to create a component for them. One example of reusable component can be found at `TeamFavoriteComponent` used from the list of teams and team detail feature.
 
