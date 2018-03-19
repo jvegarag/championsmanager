@@ -66,6 +66,7 @@ There are some other functionalities that are candidates to be implemented by us
 
 For the sake of simplicity, we chose not to create a component for them. One example of reusable component can be found at `TeamFavoriteComponent` used from the list of teams and team detail feature.
 
+Also, some functionality improvement should have been implemented like the keep the last search in the **Local storage** in order to go back to the previous state after editing or creating a team.
 
 # Screenshots
 
